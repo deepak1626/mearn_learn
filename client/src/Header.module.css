@@ -1,0 +1,27 @@
+.active{
+    color:red !important;
+}
+.nv{
+    list-style-type: none;
+    display: flex;
+    background-color:black;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+.nl{
+    margin: 20px;
+    font-size: larger;
+    font-weight: 600;
+   
+    
+}
+a{
+    text-decoration: none !important;
+    color: black !important;
+    
+}
+a:hover{
+    color:blue !important;
+}
