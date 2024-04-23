@@ -1,121 +1,199 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
-import pic1 from '../image/1.jpg'
-import pic2 from '../image/2.jpg'
-import pic3 from '../image/3.jpg'
-import pic4 from '../image/4.jpg'
-import pic5 from '../image/5.jpg'
-import pic6 from '../image/6.jpg'
-import pic7 from '../image/7.jpg'
-import pic8 from '../image/8.jpg'
-import pc from '../image/header.jpg'
-
+import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
+import tm1 from '../image/tm1.jpg'
+import tm2 from '../image/tm2.jpg'
+import tm3 from '../image/tm3.jpg'
+import tm4 from '../image/tm4.jpg'
+import { PiTwitterLogoBold } from "react-icons/pi";
+import { FiInstagram } from "react-icons/fi";
+import { PiFacebookLogoBold } from "react-icons/pi";
+import { PiLinkedinLogoBold } from "react-icons/pi";
+import { SiMediamarkt } from "react-icons/si";
+import { MdWorkspacesOutline } from "react-icons/md";
+import { GiProgression } from "react-icons/gi";
+import { GiClockwork } from "react-icons/gi";
 
 
 
 
 const About =() =>{
+    const navigate = useNavigate()
+    const change = () =>{
+        navigate('/contact')
+    }
     return(
         <>
 
         <section className="container-fuild">
+            <div className="abtbg">
+            <h1 className="bgh1">IT Solutions</h1>
+            <h3 className="text-white">Providing Your Business With <br></br>A Quality IT Service is<br></br> Our Passion</h3>
+                
 
+            </div>
 
-            
-            <section>
-                    <div>
-                        <img src={pc} alt='' className="img-fuild img-responsive" width="100%" height="600px"></img>
+            <section className="container">
+                    <div className="row text-center m-0 p-0">
+                        <h2 className="text-center m-5">Our Expert Team</h2>
+                        <div className="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                <img src={tm1} alt='' className="img-fuild" width="100%" height="100%"></img>
+                                </div>
+                                <div class="card-footer">
+                                <h4>Pratik Jain</h4>
+                                    <p>Application Manager</p>
+                                    <span className="icn"><PiTwitterLogoBold /></span>
+                                    <span className="icn"><FiInstagram /></span>
+                                    <span className="icn"><PiFacebookLogoBold /></span>
+                                    <span className="icn"><PiLinkedinLogoBold /></span>
+                                </div>
+                            </div>
                         </div>
-                    <div className="rel">
-                        <p className="t">WelCome</p>
-                        <h1 className="tt">SUMMER <br></br> COLLECTION</h1>
+                        <div className="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                <img src={tm2} alt='' className="img-fuild" width="100%" height="100%"></img>
+                                </div>
+                                <div class="card-footer">
+                                    <h4>Pratiksha Jain</h4>
+                                    <p>Social Media</p>
+                                    <span className="icn"><PiTwitterLogoBold /></span>
+                                    <span className="icn"><FiInstagram /></span>
+                                    <span className="icn"><PiFacebookLogoBold /></span>
+                                    <span className="icn"><PiLinkedinLogoBold /></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                <img src={tm3} alt='' className="img-fuild" width="100%" height="100%"></img>
+                                </div>
+                                <div class="card-footer">
+                                <h4>Shyam Rathore</h4>
+                                    <p>Content Writer</p>
+                                    
+                                    <span className="icn"><PiTwitterLogoBold /></span>
+                                    <span className="icn"><FiInstagram /></span>
+                                    <span className="icn"><PiFacebookLogoBold /></span>
+                                    <span className="icn"><PiLinkedinLogoBold /></span>
+                                   
+
+                                   
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                <img src={tm4} alt='' className="img-fuild" width="100%" height="100%"></img>
+                                </div>
+                                <div class="card-footer">
+                                <h4>Payal Goyal</h4>
+                                    <p>Business Manager</p>
+                                    <span className="icn"><PiTwitterLogoBold /></span>
+                                    <span className="icn"><FiInstagram /></span>
+                                    <span className="icn"><PiFacebookLogoBold /></span>
+                                    <span className="icn"><PiLinkedinLogoBold /></span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-      
-         <div className="container mr">
+
+                <section className="container">
+                <div className="row mt-5 m-0 p-0">
+
+                    <h2 className="text-center m-5">Working Process</h2>
+
+<div className="col-md-3">
+    <div className="card cd1">
+
+        <div className="card-body">
+            <span className="sicon"><SiMediamarkt /></span>
+            <h4>Discover</h4>
+            <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+    </div>
+</div>
+<div className="col-md-3">
+    <div className="card cd1">
+        <div className="card-body">
+            <span className="sicon"><SiMediamarkt /></span>
+            <h4>Design & Develop</h4>
+            <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+    </div>
+</div>
+<div className="col-md-3">
+    <div className="card cd1">
+
+        <div className="card-body">
+            <span className="sicon"> <SiMediamarkt /></span>
+            <h4>Install & Testing</h4>
+            <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+    </div>
+</div>
+<div className="col-md-3">
+    <div className="card cd1">
+
+        <div className="card-body">
+            <span className="sicon"> <SiMediamarkt /></span>
+            <h4>Project Delivery</h4>
+            <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+
+    </div>
+</div>
+
+</div>
+                </section>
+
+               
+                <section className="mt-5 m-0 p-5 cont1">
+                    <h2 className="m-5 h42">Let's Discuss your Projects</h2>
+                    <p className="m-5">We pride ourselves with our ability to perform and deliver results. Use the form below to discuss your<br></br>
+                        project needs with our team, we will get back asap</p>
+                    <button type="button" onClick={change} className="btn btn-lg btn-primary">Contact Us</button>
+                </section>
+                <section class=" hch1">
+                    <div className="row m-0 p-0">
+
+                        <div className="col-md-4">
+                            <span className="incc"><MdWorkspacesOutline /></span>
+                            <h3>150+</h3>
+                            <h4>Happy Clients</h4>
+                        </div>
+                        <div className="col-md-4">
+                            <span className="incc"><GiProgression /></span>
+                            <h3>350+</h3>
+                            <h4>Completed Projects</h4>
+                        </div>
+                        <div className="col-md-4">
+                            <span className="incc"><GiClockwork /></span>
+                            <h3>453+</h3>
+                            <h4>Hours Of Support</h4>
+                        </div>
+                    </div>
+                </section>
+
+
+                
             
-       <div className="row m-0 p-0">
-        <h1 className="text-center">Our Collection</h1>
-        <div className="col-md-3">
-        <img src={pic1} alt='' className="img-fuild  img-thumbnail" height="300px"></img>
-        </div>
-        <div className="col-md-3">
-        <img src={pic2} alt='' className="img-fuild img-thumbnail"  height="300px"></img>
-        </div>
-        <div className="col-md-3">
-        <img src={pic3} alt='' className="img-fuild img-thumbnail"  height="300px"></img>
-        </div>
-        <div className="col-md-3">
-        <img src={pic4} alt='' className="img-fuild img-thumbnail"  height="300px"></img>
-        </div>
+
+
+            
         
-
-       </div>
-       <div className="row mt-4">
-        <div className="col-md-3">
-        <img src={pic8} alt='' className="img-fuild  img-thumbnail" height="300px"></img>
-        </div>
-        <div className="col-md-3">
-        <img src={pic7} alt='' className="img-fuild img-thumbnail"  height="300px"></img>
-        </div>
-        <div className="col-md-3">
-        <img src={pic6} alt='' className="img-fuild img-thumbnail"  height="300px"></img>
-        </div>
-        <div className="col-md-3">
-        <img src={pic5} alt='' className="img-fuild img-thumbnail"  height="300px"></img>
-        </div>
-        
-
-       </div>
-       </div>
-
-       <div className="row bg-dark text-white m-0 p-0 pt-5">
-                <div className="col-md-3">
-                <h4 className="">Company</h4>
-                <ol>
-                    <li className="flist"><NavLink  to="/">About us</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Our Servises</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Privacy & Policy</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Affiliate Program</NavLink></li>
-                   
-                </ol>
-                </div>
-                <div className="col-md-3">
-                <h4 className="borderb">Get Help</h4>
-                <ol>
-                    
-                    <li className="flist"><NavLink  to="/">Shipping</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Returns</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Order Status</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Payment option</NavLink></li>
-                   
-                </ol>
-                </div>
-                <div className="col-md-3">
-                <h4 className="">Online shop</h4> 
-                <ol>
-                    <li className="flist"><NavLink  to="/">Watch</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Bag</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Shoes</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Dress</NavLink></li>
-                   
-                </ol>
-                </div>
-                <div className="col-md-3">
-                <h4 className="borderb">Contact Us</h4>
-                <ol>
-                    <li className="flist"><NavLink  to="/">SUMMER COLLECTION</NavLink></li>
-                    <li className="flist"><NavLink  to="/">rathoddeepak887@gmail.con</NavLink></li>
-                    <li className="flist"><NavLink  to="/">+91 7772809661</NavLink></li>
-                    <li className="flist"><NavLink   to="/">Bhavarkua indore</NavLink></li>
-                   
-                </ol>
-                </div>
-
-              </div>
        </section>
+       <Footer/>
         
         </>
     )

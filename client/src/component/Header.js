@@ -1,5 +1,5 @@
 import React, { useContext} from "react";
-import pic from '../image/dr.png'
+import pic from '../image/dn.jpg'
 import '../App.css'
 import { NavLink } from "react-router-dom";
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
@@ -10,10 +10,9 @@ const Header = () => {
     
     const {isLoggedIn, LogoutUser} = useContext(AuthContext)
    
-
+    
     return (
         <>
-
 
 
 

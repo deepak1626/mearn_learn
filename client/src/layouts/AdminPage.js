@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 import '../App.css'
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Navigate, Outlet } from "react-router-dom";
 
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 import '../../node_modules/bootstrap/dist/js/bootstrap.js'
+import { AuthContext } from "../store/auth.js";
 
 const AdminPage =() =>{
+
+    const {user, isLoading} = useContext(AuthContext)
+    console.log('admin page', user)
+
+
+    if(isLoading){
+        return<h1>loading...</h1>
+    }
+
+    if(!user.isAdmin){
+        return<Navigate to="/" />
+    }
+
+
+
+   /*  if(!user.isAdmin){
+
+    } */
+
     return(
         <>
         <div className="adminrw">

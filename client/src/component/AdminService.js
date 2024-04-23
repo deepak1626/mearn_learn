@@ -1,6 +1,7 @@
 
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
+import { AuthContext } from "../store/auth.js";
 
 
 const AdminService = () => {
@@ -9,6 +10,7 @@ const AdminService = () => {
     const[description, setDescription] = useState("")
     const[uploadFile, setUploadFile] = useState("")
     const file= useRef("");
+     const {authorizationToken} = useContext(AuthContext)
     
     const addService = async (e) => {
         e.preventDefault()
@@ -18,6 +20,10 @@ const AdminService = () => {
             data.append('uploadFile',uploadFile)
             try{
                 const dataToAdd = await fetch('http://localhost:9000/api/admin/services/post',{
+                   
+                    headers: {
+                        authorization:authorizationToken
+                    },
                     method: 'POST',
                     body: data
 

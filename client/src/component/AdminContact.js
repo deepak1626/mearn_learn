@@ -1,19 +1,28 @@
-import React, { useEffect, useState} from "react";
+import React, { useEffect, useState,useContext} from "react";
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 import '../../node_modules/bootstrap/dist/js/bootstrap.js'
+import { AuthContext } from "../store/auth.js";
 
 const AdminContact =() =>{
     const [contact, setContact] = useState([])
     const [id, setId] = useState("")
 
+    
+
     const confirmDelete = async (id)=> {
         setId(id)
 
     }
+
+    const {authorizationToken} = useContext(AuthContext)
     const deleteData = async (id) => {
         try {
             const data = await fetch(`http://localhost:9000/api/admin/contact/delete/${id}`,{
-                method: 'DELETE'
+                headers: {
+                    authorization:authorizationToken
+                },
+               method: 'DELETE' 
+               
             })
             const res = await data.json()
             console.log(res)
@@ -32,7 +41,11 @@ const AdminContact =() =>{
     const getData = async () => {
 
     try {
-        const data = await fetch('http://localhost:9000/api/admin/contact')
+        const data = await fetch('http://localhost:9000/api/admin/contact', {
+            headers: {
+                authorization:authorizationToken
+            }
+        })
         const res = await data.json()
         console.log(res)
         setContact(res)

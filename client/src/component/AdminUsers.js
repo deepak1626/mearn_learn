@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import '../App.css'
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 import '../../node_modules/bootstrap/dist/js/bootstrap.js'
+import { AuthContext } from "../store/auth.js";
 
 
 const AdminUsers = () => {
@@ -13,11 +14,18 @@ const AdminUsers = () => {
 
     const [user, setUser] = useState([])
 
-   /*  const [datadelete, setDatadelete] = useState("") */
+   
 
+   const [datadelete, setDatadelete] = useState("")
+
+   const {authorizationToken} = useContext(AuthContext)
     const getData = async () => {
         try {
-            const data = await fetch('http://localhost:9000/api/admin/users')
+            const data = await fetch('http://localhost:9000/api/admin/users', {
+                headers: {
+                    authorization:authorizationToken
+                }
+            } )
             const res = await data.json()
             console.log(res)
             setUser(res)
@@ -28,7 +36,7 @@ const AdminUsers = () => {
     }
     useEffect(() => {
         getData()
-    }, [])
+    },[])
     
     
 
@@ -57,6 +65,9 @@ const AdminUsers = () => {
     const deleteData = async (id) => {
         try {
             const data = await fetch(`http://localhost:9000/api/admin/user/delete/${id}`,{
+                headers: {
+                    authorization:authorizationToken
+                },
                 method: 'DELETE'
             })
             const res = await data.json()
@@ -161,7 +172,7 @@ const AdminUsers = () => {
                                 <td className="text-center">{value.email}</td>
                                 <td className="text-center">{value.contact}</td>
                                 <td className="text-center" ><button className="btn btn-primary" onClick={() => singleuser(value._id)} data-bs-toggle="modal" data-bs-target="#myModal"> Edit </button>|
-                                    <button className="btn btn-danger" data-bs-toggle="modal" onClick={() => confirmDelete(value._id)} data-bs-target="#myModal2">Delete</button>
+                                    <button className="btn btn-danger" data-bs-toggle="modal" value={"delete"} onClick={() => confirmDelete(value._id)} data-bs-target="#myModal2">Delete</button>
                                 </td>
 
                             </tr>

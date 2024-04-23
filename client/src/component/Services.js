@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import '../App.css'
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
+import Footer from "./Footer";
 
 const Services = () => {
     const [services, setServices] = useState([])
@@ -26,6 +27,7 @@ const Services = () => {
             <section>
                 <div className="container">
                     <div className="row text-center align-items-center" >
+                        <h3>Our Services</h3>
                         {
                             services.map((value) => {
                                 return <div className="col-md-4 m-0 p-0 mt-5">
@@ -59,6 +61,7 @@ const Services = () => {
                         }
                     </div>
                 </div>
+                <Footer/>
             </section>
 
         </>

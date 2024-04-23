@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext  } from "react";
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 import '../../node_modules/bootstrap/dist/js/bootstrap.js'
+import { AuthContext } from "../store/auth.js";
 
 const AdminDeleteservice = () => {
     const [service, setService] = useState([])
@@ -8,6 +9,8 @@ const AdminDeleteservice = () => {
     const confirmDelete = async (id) => {
         setId(id)
     }
+
+        const {authorizationToken} = useContext(AuthContext)
     const getData = async () => {
         try {
             const data = await fetch('http://localhost:9000/api/data/service')
@@ -27,6 +30,9 @@ const AdminDeleteservice = () => {
     const deleteData = async (id) => {
         try {
             const data = await fetch(`http://localhost:9000/api/admin/services/${id}`, {
+           headers: {
+                    authorization:authorizationToken
+                },
                 method: 'DELETE'
             })
             const res = await data.json()

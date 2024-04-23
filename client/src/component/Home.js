@@ -1,107 +1,293 @@
 import React from "react";
-
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 
-import pic from '../image/tt.jpg'
+
+import pic from '../image/888.jpg'
+import tm1 from '../image/tm1.jpg'
+import tm2 from '../image/tm2.jpg'
+import tm3 from '../image/tm3.jpg'
+import tm4 from '../image/tm4.jpg'
+
+
+import { HiOutlineLightBulb } from "react-icons/hi";
+import { CgWebsite } from "react-icons/cg";
+import { SiMediamarkt } from "react-icons/si";
+import { FaNetworkWired } from "react-icons/fa";
+import { TiCloudStorageOutline } from "react-icons/ti";
+import { MdOutlineDataset } from "react-icons/md";
+import { MdWorkspacesOutline } from "react-icons/md";
+import { GiProgression } from "react-icons/gi";
+import { GiClockwork } from "react-icons/gi";
+import { PiTwitterLogoBold } from "react-icons/pi";
+import { FiInstagram } from "react-icons/fi";
+import { PiFacebookLogoBold } from "react-icons/pi";
+import { PiLinkedinLogoBold } from "react-icons/pi";
+import Footer from "./Footer";
+import sample from '../image/vid.mp4'
+
 
 
 
 
 
 const Home = () => {
+    const navigate = useNavigate()
+    const change = () => {
+        navigate('/contact')
+    }
     return (
         <>
             <section className="container-fuild">
-               
-                <section>
-                    <div>
-                        <img src={pic} alt='' className="img-fuild img-responsive" width="100%" height="600px"></img>
+
+
+                {/*   <div className="bg">
+                    <h1 className="bgh1">IT Solutions</h1>
+                    <p className="bgp">You can easily change any design to your own. <br></br>It is also highly customizable SEO friendly template</p>
+
+                </div> */}
+
+
+                <video className='videoTag' width="100%" autoPlay loop muted >
+                    <source src={sample} type='video/mp4' />
+                </video>
+
+                <div className="container">
+                    <div className="row mt-5 m-0 p-0">
+
+                        <div className="col-md-4">
+                            <div className="card cd1">
+
+                                <div className="card-body">
+                                    <span className="sicon"> <HiOutlineLightBulb /></span>
+                                    <h4>Application Design</h4>
+                                    <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+
+                            </div>
                         </div>
-                    <div className="rel">
-                        <p className="t">WelCome</p>
-                        <h1 className="tt">SUMMER <br></br> COLLECTION</h1>
+                        <div className="col-md-4">
+                            <div className="card cd1">
+                                <div className="card-body">
+                                    <span className="sicon"><CgWebsite /></span>
+                                    <h4>Web Hosting</h4>
+                                    <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div className="card cd1">
+
+                                <div className="card-body">
+                                    <span className="sicon"> <SiMediamarkt /></span>
+                                    <h4>Social Media</h4>
+                                    <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div className="row mt-5 m-0 p-0">
+
+                        <div className="col-md-4">
+                            <div className="card cd1">
+
+                                <div className="card-body">
+                                    <span className="sicon"> <TiCloudStorageOutline /></span>
+                                    <h4>Cloud Server</h4>
+                                    <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div class="card cd1">
+                                <div class="card-body">
+                                    <span className="sicon"> <MdOutlineDataset /></span>
+                                    <h4>Data Security</h4>
+                                    <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div className="col-md-4">
+                            <div class="card cd1">
+
+                                <div class="card-body">
+                                    <span className="sicon"> <FaNetworkWired /></span>
+                                    <h4>SEO Optimazation</h4>
+                                    <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <section className="container">
+                    <div className="row m-0 p-0">
+                        <h2 className="text-center m-5">Why Choose Us</h2>
+                        <div className="col-md-4 text-end">
+                            <h3 className="">Experience</h3>
+                            <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h3>Products</h3>
+                            <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h3>Approach</h3>
+                            <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+                        <div className="col-md-4">
+                            <img src={pic} alt='' className="img-fuild" width="100%" height="100%"></img>
+                        </div>
+                        <div className="col-md-4">
+                            <h3>Pricing</h3>
+                            <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h3>Delivery</h3>
+                            <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h3>Support</h3>
+                            <p>Ronsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        </div>
+
+
                     </div>
                 </section>
-                <section className="mr">
-                    <div className="container">
-                        <h1 className="text-center">SUMMER SALE STARTS IN</h1>
-                        <div className="row mt-5">
-                            <div className="col-md-3 "><h1 class="grad1 p-5 text-white">00
-                                <hr></hr>
-                                <span>Days</span></h1></div>
-                            <div className="col-md-3 "><h1 class="grad1 p-5 text-white">00
-                                <hr></hr>
-                                <span>Hours</span></h1></div>
-                            <div className="col-md-3 "><h1 class="grad1 p-5 text-white">00
-                                <hr></hr>
-                                <span>Minutes</span></h1></div>
-                            <div className="col-md-3 "><h1 class="grad1 p-5 text-white">00
-                                <hr></hr>
-                                <span>Seconds</span></h1></div>
 
+                <section class=" hch">
+                    <div className="row m-0 p-0">
+
+                        <div className="col-md-4">
+                            <span className="incc"><MdWorkspacesOutline /></span>
+                            <h3>150+</h3>
+                            <h4>Happy Clients</h4>
+                        </div>
+                        <div className="col-md-4">
+                            <span className="incc"><GiProgression /></span>
+                            <h3>350+</h3>
+                            <h4>Completed Projects</h4>
+                        </div>
+                        <div className="col-md-4">
+                            <span className="incc"><GiClockwork /></span>
+                            <h3>453+</h3>
+                            <h4>Hours Of Support</h4>
                         </div>
                     </div>
-
                 </section>
-                <section>
-                    <div className="dd">
-                        <h1 className="kk">PURCHASE OUR SUMMER <br></br> COLLECTION</h1>
-                        <p className="wh">Web Design HTML Templates</p>
 
-                        <center>
-                            <button type="button" className="btn btn-light p-3 m-5 ">PURCHASE NOW</button>
-                            <button type="button" className="btn btn-light p-3 m-5">MORE DISCOU</button>
-                        </center>
+                <section className="container">
+                    <div className="row text-center m-0 p-0">
+                        <h2 className="text-center m-5">Our Team</h2>
+                        <div className="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src={tm1} alt='' className="img-fuild" width="100%" height="100%"></img>
+                                </div>
+                                <div class="card-footer">
+                                    <h4>Pratik Jain</h4>
+                                    <p>Application Manager</p>
+                                    <span className="icn"><PiTwitterLogoBold /></span>
+                                    <span className="icn"><FiInstagram /></span>
+                                    <span className="icn"><PiFacebookLogoBold /></span>
+                                    <span className="icn"><PiLinkedinLogoBold /></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src={tm2} alt='' className="img-fuild" width="100%" height="100%"></img>
+                                </div>
+                                <div class="card-footer">
+                                    <h4>Pratiksha Jain</h4>
+                                    <p>Social Media</p>
+                                    <span className="icn"><PiTwitterLogoBold /></span>
+                                    <span className="icn"><FiInstagram /></span>
+                                    <span className="icn"><PiFacebookLogoBold /></span>
+                                    <span className="icn"><PiLinkedinLogoBold /></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src={tm3} alt='' className="img-fuild" width="100%" height="100%"></img>
+                                </div>
+                                <div class="card-footer">
+                                    <h4>Shyam Rathore</h4>
+                                    <p>Content Writer</p>
+
+                                    <span className="icn"><PiTwitterLogoBold /></span>
+                                    <span className="icn"><FiInstagram /></span>
+                                    <span className="icn"><PiFacebookLogoBold /></span>
+                                    <span className="icn"><PiLinkedinLogoBold /></span>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-md-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <img src={tm4} alt='' className="img-fuild" width="100%" height="100%"></img>
+                                </div>
+                                <div class="card-footer">
+                                    <h4>Payal Goyal</h4>
+                                    <p>Business Manager</p>
+                                    <span className="icn"><PiTwitterLogoBold /></span>
+                                    <span className="icn"><FiInstagram /></span>
+                                    <span className="icn"><PiFacebookLogoBold /></span>
+                                    <span className="icn"><PiLinkedinLogoBold /></span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
-              <div className="row bg-dark text-white m-0 p-0 pt-5">
-                <div className="col-md-3">
-                <h4 className="">Company</h4>
-                <ol>
-                    <li className="flist"><NavLink  to="/">About us</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Our Servises</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Privacy & Policy</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Affiliate Program</NavLink></li>
-                   
-                </ol>
-                </div>
-                <div className="col-md-3">
-                <h4 className="borderb">Get Help</h4>
-                <ol>
-                    
-                    <li className="flist"><NavLink  to="/">Shipping</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Returns</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Order Status</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Payment option</NavLink></li>
-                   
-                </ol>
-                </div>
-                <div className="col-md-3">
-                <h4 className="">Online shop</h4> 
-                <ol>
-                    <li className="flist"><NavLink  to="/">Watch</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Bag</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Shoes</NavLink></li>
-                    <li className="flist"><NavLink  to="/">Dress</NavLink></li>
-                   
-                </ol>
-                </div>
-                <div className="col-md-3">
-                <h4 className="borderb">Contact Us</h4>
-                <ol>
-                    <li className="flist"><NavLink  to="/">SUMMER COLLECTION</NavLink></li>
-                    <li className="flist"><NavLink  to="/">rathoddeepak887@gmail.con</NavLink></li>
-                    <li className="flist"><NavLink  to="/">+91 7772809661</NavLink></li>
-                    <li className="flist"><NavLink   to="/">Bhavarkua indore</NavLink></li>
-                   
-                </ol>
-                </div>
 
-              </div>
-       
-              
+                <section className="mt-5 m-0 p-5 cont">
+                    <h2 className="m-5 h42">Let's Discuss your Projects</h2>
+                    <p className="m-5">We pride ourselves with our ability to perform and deliver results. Use the form below to discuss your<br></br>
+                        project needs with our team, we will get back asap</p>
+                    <button type="button" onClick={change} className="btn btn-lg btn-primary">Contact Us</button>
+                </section>
+
+
+
+
+
+                <Footer />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </section>
 
         </>

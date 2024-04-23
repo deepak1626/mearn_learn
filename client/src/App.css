@@ -1,6 +1,7 @@
 *{
   margin: 0%;
   padding: 0%;
+  font-style: italic;
 }
 
 .bgclr{
@@ -20,9 +21,11 @@
 .nlink{
   padding: 15px;
   font-size: larger;
-  font-weight: 600;  
+  font-weight: 600;
+  font-style: italic;  
   
 }
+
 
 a{
   text-decoration: none !important;
@@ -69,7 +72,11 @@ input:focus {
         margin-top: 50px;
       }
       .cnt{
+        
         width: 50%;
+       /*  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
+        
+
       }
       .msg{
         width: 100%;
@@ -77,7 +84,7 @@ input:focus {
       }
 
      /*  service :start */
-     .flip-card {
+     /* .flip-card {
       background-color: transparent;
       width: 300px;
       height: 250px;
@@ -118,7 +125,7 @@ input:focus {
     }
     .flcard{
       margin: 40px;
-    }
+    } */
      /* service :end */
 
 
@@ -144,228 +151,121 @@ input:focus {
       justify-content: right;
      }
 .adminrw{
-  background-image: linear-gradient(rgb(224, 74, 74), rgb(238, 238, 161), rgb(207, 114, 70));
+  background-image: linear-gradient(rgb(161, 161, 209),rgb(23, 92, 116), rgb(68, 154, 203), rgb(95, 95, 228));
 }
 .adfrm{
   text-align: justify;
 }
 
-
-.homerow{
-  background-color:brown !important;
-  margin-top: 0px;
-  
-}
-#col-6{
-  padding: 60px;
-}
-.homeh2{
-  font-style: italic;
-  color: rgb(34, 59, 114);
-
-}
-.homebtn{
-  margin: 20px 0px 0px 50px;
-}
-
-.shoph1{
+.ftr{
+  background-color: black;
   text-align: center;
-  font-family: Italic;
-  color: brown;
-  margin: 50px;
+  padding: 30px;
 }
-.crd{
-  text-align: center;
-  background-color: brown !important;
-  color: white !important;
-  margin-bottom: 50px;
-  font-family: Italic;
-  padding: 20px;
-}
-.paregraph1{
-  font-size: 20px;
-}
-.divicon{
-  font-size: 40px;
-}
-.arrival{
-  background-image: linear-gradient(rgb(189, 37, 37), rgb(250, 250, 85), rgb(137, 201, 85));
-}
-.arivalhed{
-  font-family: Italic;
-  color: brown;
-  margin-top: 100px;
-  margin-left: 50px;
-  font-size: 60px;
-}
-.aritext{
-  font-size: 25px;
-  font-family: italic;
-  margin: 30px;
-  color: brown;
-  justify-content: center;
-}
-.sub-bg{
-  background-color: rgb(213, 223, 187);
-  text-align: center;
-}
-.sub{
-  padding: 50px;
-  font-family: Italic;
-  color: brown;
-  font-size: 40px;
-}
-.subinput{
-  border-radius: 50px;
-  width: 50%;
-  height: 60px;
-  margin: 30px;
-  border: none;
-}
-.carasole{
-  text-align: center;
-}
-.carasl{
-  padding: 50px;
-  font-family: Italic;
-  color: brown;
-  font-size: 50px;
-}
-.footer1{
-  background-image: linear-gradient(brown, orange, red);
+.ftrh3{
   color: white;
-  padding: 20px;
-  
+  font-style: italic;
+}
 
-}
-.borderb{
-  font-family: Italic;
-}
-.flist{
-  list-style-type: none;
-  margin-top: 20px;
-  
-  font-size: large;
-  
-}
-#fnav{
+.cd1{
+
+  background-color: black !important;
   color: white !important;
+  text-align: center;
+
+}
+
+.sicon{
+  font-size: 40px;
+}
+.icn{
+  font-size: 20px;
+  margin: 15px;
+}
+.cntr{
+  text-align: center;
+}
+.hch{
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 50px;
+
+}
+.incc{
+  font-size: 40px;
+  margin: 20px;
+}
+.cont{
+  text-align: center;
+  background-color: silver;
+  color: white;
+  padding: 50px;
   
 }
-#fnav:hover{
-  color: green !important;
+.h42{
+  margin: 30px;
 }
+/* .bg {
+  
+  background-image: url(image/rbt.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+ height: 500px;
+ width: 100%; 
+ padding: 150px;
+ 
+} */
 
-
-#fnavi{
-  color: white !important;
-  margin: 10px;
-
- font-size: 20px;
- background-color:rgb(108, 184, 201) ;
- border-radius: 100%;
- padding: 10px;
+.bgh1{
+  color: white;
+ 
+  font-size: 50px;
+  text-shadow: 2px 2px 5px orange;
 }
-#fnavi:hover{
-  color: brown !important;
+.bgp{
+  color: white;
+  font-size: 20px;
+  text-shadow: 2px 2px 5px orange;
 }
-
-.servicefrm{
-  width: 50%;
-  justify-content: center;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+.ic{
+  font-size: 20px;
+  color: white;
+  margin: 20px;
+}
+.ic:hover{
+  color: orange;
+}
+.abtbg {
+  background-image: url(image/rbt.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+ height: 500px;
+ width: 100%; 
+ padding: 150px;
  
 }
-.sd{
-  text-shadow: 2px 2px 5px red;
-}
-.ad{
+.hch1{
+  background-color: silver;
+  color: black;
+  text-align: center;
+  padding: 50px;
  
-  color:black !important;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-
-.img-responsive{
-
-	position: absolute;
-}
-.rel{
-	position: relative;
-	padding-top: 150px;
-	text-align: center;
-	 
-}
-
-.t{
-	font-size: 30px;
-	color: white;
-  text-shadow: 2px 2px 5px red;
 
 }
-.tt{
-	font-size: 70px;
-	color: white;
-  text-shadow: 2px 2px 5px red;
-
-}
-.mr{
-	margin-top: 300px;
-	justify-content: center;
-}
-
-.grad1 {
-  height: 200px;
-  width: 250px;
-  text-align:center;
-  background-color: red;
-  background-image: linear-gradient(red,blue,orange,red);
-}
-
-.dd {
-	margin-top: 80px;
-  height: 400px;
-  
-  background-color: red;
-  background-image: linear-gradient(rgb(111, 26, 26),black);
-
+.cont1{
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 50px;
   
 }
-.kk{
-	text-align:center;
-	color: white;
-	padding-top: 50px;
-	font-size: 40px;
-}
-.wh{
-	color: white;
-	text-align: center;
-	font-size: 30px;
+.nlinkf{
+  padding: 10px;
+  font-size: larger;
+  font-weight: 600;
+  
+  
 }
 
-.btn {
-	border-radius: 25px;
-}
-.btn:hover {
-	background-color: pink;
-	}
-	.h{
-		margin-top: 50px;
-		font-size: 60px;
-	}
-.p{
-	font-size: 20px;
-	padding: 10px;
-}
-
-.p:hover{
-color: blue;
-}
-.form-control{
-	border-radius: 25px;
-	width: 300px;
-	padding: 30px;
-	margin-top: 20px;
-
-}

@@ -12,6 +12,10 @@ const serviseSchema = new mongoose.Schema({
     image:{
         type: String,
         require: true
+    },
+    isAdmin: {
+        type: Boolean,
+        default: false
     }
 
 })
